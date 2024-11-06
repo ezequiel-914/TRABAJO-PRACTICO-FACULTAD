@@ -263,6 +263,9 @@
     .assistance h1{
         font-size: 23px;
     }
+    .assistance{
+        height: 500px;
+    }
     .assistance p{
         font-size: 20px;
         padding-left: 45px;
