@@ -5,6 +5,9 @@
     .uno h1{
         font-size: 30px;
     }
+    .sombreado{
+        overflow-x: hidden;
+    }
 }
 @media (max-width: 1200px){
     .titulo h1{
@@ -25,6 +28,9 @@
     .assistance p{
         font-size: 30px;
         width: 500px;
+    }
+    .sombreado{
+        overflow-x: hidden;
     }
 
 }
@@ -57,6 +63,9 @@
     .sombreado{
         height: 400px;
     }
+    .sombreado{
+        overflow-x: hidden;
+    }
     .assistance p{
         font-size: 26px;
     }
@@ -73,6 +82,9 @@
     }
     .subtitulo h2{
         font-size: 23px;
+    }
+    .sombreado{
+        overflow-x: hidden;
     }
     .uno h1{
         font-size: 17px;
@@ -104,6 +116,9 @@
     .auto{
         width: 200px;
         height: 200px;
+    }
+    .sombreado{
+        overflow-x: hidden;
     }
     .auto img{
         height: 150px;
@@ -145,6 +160,9 @@
 
         width: 150px;
     }
+    .sombreado{
+        overflow-x: hidden;
+    }
     .logo{
         width: 100px;
     }
@@ -166,6 +184,9 @@
     .cabezal-container{
         transform: translateX(30px);
         height: 150px;
+    }
+    .sombreado{
+        overflow-x: hidden;
     }
     .titulo h1{
         font-size: 23px;
@@ -254,6 +275,9 @@
     .cabezal-container{
         transform: translateX(50px);
         margin-left: 40px;
+    }
+    .sombreado{
+        overflow-x: hidden;
     }
     .titulo h1{
         font-size: 20px;
