@@ -183,6 +183,7 @@ body{
 }
 .sombreado{
     width: 100vw;
+    border-top: red solid 2px;
     overflow-x: hidden;
     height: 500px;
     background-image: 
