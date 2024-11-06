@@ -130,7 +130,6 @@ body{
     align-items: center;
     justify-content: space-between;
     z-index: 20;
-    border: solid red 2px;
     
 }
 .menu-icone{
@@ -142,7 +141,6 @@ body{
     justify-content: space-between;
     cursor: pointer;
     transition: transform 0.3s ease;
-    border: solid 2px green;
     display: none;
 }
 .line-one, .line-two, .line-three{
