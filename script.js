@@ -45,6 +45,8 @@ function menuBurger(){
   } else {
     MenuBurger.style.transform = 'translateX(-20px)';
   }
+  
+  
   console.log(MenuBurger.style.transform)
 
  }
