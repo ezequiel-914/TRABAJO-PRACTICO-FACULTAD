@@ -150,7 +150,15 @@
 }
 @media (max-width: 800px){
     .cabezal-container{
-        margin-right: -50px;
+        margin-right: -55px;
+    }
+    .menu-icone{
+        margin-left: 40px;
+        height: 35px;
+        width: 35px;
+    }
+    .subtitulo h2{
+        text-align: center;
     }
     .auto{
         width: 160px;
@@ -166,9 +174,18 @@
     .logo{
         width: 100px;
     }
+    .assistance p{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
     .menu-icone{
         width: 30px;
         height: 30px;
+    }
+}
+@media (max-width: 647px){
+    .cabezal-container{
+        margin-left: -60px;
     }
 }
 @media (max-width: 600px){
@@ -287,16 +304,14 @@
     }
     .assistance h1{
         font-size: 23px;
-        padding-left: 20px;
-        padding-right: 20px;
+        max-width: 370px;
     }
     .assistance{
         height: 500px;
     }
     .assistance p{
         font-size: 20px;
-        padding-left: 45px;
-        padding-right: 45px;
+        max-width: 350px;
     }
 }
 @media(max-width:400px){
@@ -309,12 +324,21 @@
     }
     .assistance h1{
         font-size: 21px;
-        padding-left: 20px;
-        padding-right: 20px;
+        max-width: 300px;
     }
     .assistance p{
-        font-size: 18px;
-        padding-left: 57px;
-        padding-right: 57px;
+        max-width: 300px;
     }
+}
+@media(max-width:350px){
+    .cabezal-container{
+        margin-left: 0;
+    }
+    .menu-icone{
+        width: 15px;
+        height: 15px;
+        margin-left: 100px;
+        
+    }
+
 }
