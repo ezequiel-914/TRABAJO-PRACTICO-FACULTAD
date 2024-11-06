@@ -2,7 +2,7 @@ function slideshow(){
     let slide = document.getElementById('autos');
     let currenTranslateX = slide.style.transform;
     
-    if (currenTranslateX=== 'translateX(-1px)') {
+    if (currenTranslateX=== 'translateX(-10px)') {
         slide.style.transform = 'translateX(-400px)';}
     else if (currenTranslateX=== 'translateX(-400px)'){
         slide.style.transform = 'translateX(-800px)';
@@ -15,7 +15,7 @@ function slideshow(){
     } else if (currenTranslateX=== 'translateX(-2000px)'){
         slide.style.transform = 'translateX(-2200px)';
     }else {
-        slide.style.transform = 'translateX(-1px)';
+        slide.style.transform = 'translateX(-10px)';
     }
 }
 setInterval(slideshow,3000);
