@@ -152,6 +152,9 @@
     .cabezal-container{
         margin-right: -55px;
     }
+    .slideshow{
+        width: 150%;
+    }
     .menu-icone{
         margin-left: 40px;
         height: 35px;
@@ -186,6 +189,9 @@
 @media (max-width: 647px){
     .cabezal-container{
         margin-left: -60px;
+    }
+    .slideshow{
+        width: 150%;
     }
 }
 @media (max-width: 600px){
