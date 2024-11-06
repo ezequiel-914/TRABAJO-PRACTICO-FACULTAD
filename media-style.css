@@ -287,6 +287,8 @@
     }
     .assistance h1{
         font-size: 23px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .assistance{
         height: 500px;
@@ -307,6 +309,8 @@
     }
     .assistance h1{
         font-size: 21px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .assistance p{
         font-size: 18px;
