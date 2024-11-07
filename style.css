@@ -39,11 +39,11 @@
   }
   
 body{
-    overflow-x: hidden;
     background-image: url(img/fondo-slideshow-2.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    overflow: hidden;
 }
 .special-words{
     color: var(--amarillo);
@@ -172,7 +172,7 @@ body{
     text-shadow: 0px 4px 12px #F2CB05;
 }
 .slideshow{
-    width: 200%;
+    /*width: 200%;*/
     height: 500px;
     transform: translateX();
     color: white;
@@ -183,7 +183,6 @@ body{
 }
 .sombreado{
     width: 100vw;
-    overflow-x: hidden;
     height: 500px;
     background-image: 
     linear-gradient(to right, rgb(0, 0, 0) 0%, rgba(255,255,255, 0) 25%),
@@ -199,6 +198,7 @@ body{
     position: relative;
     transform: translateX(-10px);
     transition: transform 0.5s ease;
+    overflow-x: hidden;
 }
 .auto{
     background: #9c9b9b74;
