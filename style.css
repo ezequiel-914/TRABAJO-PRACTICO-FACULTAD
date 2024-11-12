@@ -43,10 +43,7 @@ body{
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    overflow: hidden;
-}
-.special-words{
-    color: var(--amarillo);
+    overflow-x: hidden;
 }
 .cabezal{
     width: 100vw;
@@ -60,13 +57,13 @@ body{
     linear-gradient(to right, black, rgba(0,0,0,0) 25%),
     linear-gradient(to left, black, rgba(0,0,0,0)25%), linear-gradient(to bottom, black, rgba(0,0,0,0) 65%);
     color: white;
+    border: solid yellow 2px;
 }
 .logo{
     width: 250px;
-    height: 80px;
-    margin-top: calc(2%);
-    margin-left: 50px;
-    background-color: #161fcc00;
+    height: 100%;
+    border: solid 3px white;
+    display: flex;
 }
 .cabezal-container{
     width: 800px;
@@ -76,6 +73,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    border: solid red 2px;
 }
 
 .titulo h1{
@@ -126,21 +124,22 @@ body{
     height: 700px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-end;
+    justify-content: flex-start;
     z-index: 20;
+    border: solid green 2px;
     
 }
 .menu-icone{
     width: 50px;
     height: 50px;
-    margin-top: 20px;
+    margin: 20px 40px 20px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
     transition: transform 0.3s ease;
-    display: none;
+    border: solid blue 2px;
 }
 .line-one, .line-two, .line-three{
     width: 100%;
@@ -151,6 +150,7 @@ body{
 .menu-burger-list{
     width: 200px;
     height: 500px;
+    border: solid 2px red;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -158,7 +158,7 @@ body{
     background-color: #262626b4;
     border-radius: 10px;
     box-shadow: 0 4px 12px #F2CB05;
-    transform: translateX(200px);
+    /*transform: translateX(200px);*/
     
 }
 .menu-burger-list a{
@@ -172,7 +172,7 @@ body{
     text-shadow: 0px 4px 12px #F2CB05;
 }
 .slideshow{
-    /*width: 200%;*/
+   /* width: 200%;*/
     height: 500px;
     transform: translateX();
     color: white;
@@ -188,7 +188,8 @@ body{
     linear-gradient(to right, rgb(0, 0, 0) 0%, rgba(255,255,255, 0) 25%),
     linear-gradient(to left, rgb(0, 0, 0) 0%, rgba(255,255,255, 0)25%);
     position: absolute;
-    z-index: 10;
+    /*z-index: 10;*/
+    overflow-x: hidden;
 }
 .autos{
     display: flex;
@@ -198,7 +199,6 @@ body{
     position: relative;
     transform: translateX(-10px);
     transition: transform 0.5s ease;
-    overflow-x: hidden;
 }
 .auto{
     background: #9c9b9b74;
@@ -213,11 +213,6 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.auto:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .auto img {

@@ -80,7 +80,7 @@
         padding: 20px;
     }
     .menu{
-        transform: translateY(-1600px);
+        /*transform: translateY(-1600px);*/
     }
     .menu-burger-list{
         transform: translateX(200px);
