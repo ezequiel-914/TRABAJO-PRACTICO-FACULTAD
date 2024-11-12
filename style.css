@@ -158,7 +158,8 @@ body{
     background-color: #262626b4;
     border-radius: 10px;
     box-shadow: 0 4px 12px #F2CB05;
-    /*transform: translateX(200px);*/
+    transform: translateX(200px);
+    transition: transform 0.5s ease;
     
 }
 .menu-burger-list a{
@@ -188,7 +189,7 @@ body{
     linear-gradient(to right, rgb(0, 0, 0) 0%, rgba(255,255,255, 0) 25%),
     linear-gradient(to left, rgb(0, 0, 0) 0%, rgba(255,255,255, 0)25%);
     position: absolute;
-    /*z-index: 10;*/
+    z-index: 10;
     overflow-x: hidden;
 }
 .autos{
