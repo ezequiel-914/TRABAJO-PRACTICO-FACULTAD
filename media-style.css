@@ -79,11 +79,7 @@
         text-shadow: none;
         padding: 20px;
     }
-    .menu{
-        /*transform: translateY(-1600px);*/
-    }
     .menu-burger-list{
-        transform: translateX(200px);
         transition: transform 0.5s ease;
         width: 200px;
     }
@@ -137,9 +133,6 @@
     .cabezal-container{
         margin-right: -55px;
     }
-    .slideshow{
-        width: 150%;
-    }
     .menu-icone{
         margin-left: 40px;
         height: 35px;
@@ -177,13 +170,11 @@
     .menu-icone{
         height: 20px;
         width: 20px;
-        margin-left: 90px;
     }
     .line-one, .line-two, .line-three{
         height: 2px;
     }
     .cabezal-container{
-        transform: translateX(30px);
         height: 150px;
     }
 
@@ -196,9 +187,6 @@
         text-align: center;
     }
     .slideshow{
-        height: 300px;
-    }
-    .sombreado{
         height: 300px;
     }
     .auto{
@@ -268,13 +256,7 @@
     }
 }
 @media (max-width: 450px){
-    .logo{
-        display: none;
-    }
-    .cabezal-container{
-        transform: translateX(50px);
-        margin-left: 40px;
-    }
+
         .titulo h1{
         font-size: 20px;
     }
@@ -316,7 +298,6 @@
     .menu-icone{
         width: 15px;
         height: 15px;
-        margin-left: 100px;
         
     }
 

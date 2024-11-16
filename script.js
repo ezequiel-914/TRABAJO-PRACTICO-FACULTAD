@@ -1,33 +1,4 @@
-function slideshow(){
-    let slide = document.getElementById('autos');
-    let ocultar = document.getElementById('slideshow');
-    let slideOver= ocultar.style.overflowX;
-    let currenTranslateX = slide.style.transform;
-    
-    if (currenTranslateX=== 'translateX(-10px)') {
-        slide.style.transform = 'translateX(-400px)';
-        slideOver= 'hidden';}
-    else if (currenTranslateX=== 'translateX(-400px)'){
-        slide.style.transform = 'translateX(-800px)';
-        slideOver= 'hidden';
-    } else if (currenTranslateX=== 'translateX(-800px)'){
-        slide.style.transform = 'translateX(-1200px)';
-        slideOver= 'hidden';
-    } else if (currenTranslateX=== 'translateX(-1200px)'){
-        slide.style.transform = 'translateX(-1600px)';
-        slideOver= 'hidden';
-    } else if (currenTranslateX=== 'translateX(-1600px)'){
-        slide.style.transform = 'translateX(-2000px)';
-        slideOver= 'hidden';
-    } else if (currenTranslateX=== 'translateX(-2000px)'){
-        slide.style.transform = 'translateX(-2200px)';
-        slideOver= 'hidden';
-    }else {
-        slide.style.transform = 'translateX(-10px)';
-        slideOver= 'hidden';
-    }
-}
-setInterval(slideshow,3000);
+
 
 window.addEventListener('scroll',
 function (){
@@ -49,13 +20,39 @@ document.getElementById("menuIcono").addEventListener("click", function() {
   });
 function menuBurger(){   
   let MenuBurger = document.getElementById('burger-list');
-  if (MenuBurger.style.transform === 'translateX(-20px)'){
-    MenuBurger.style.transform = 'translateX(200px)';
+  if (MenuBurger.style.opacity === '1'){
+    MenuBurger.style.opacity = '0';
   } else {
-    MenuBurger.style.transform = 'translateX(-20px)';
+    MenuBurger.style.opacity = '1';
   }
-  
-  
-  console.log(MenuBurger.style.transform)
-
  }
+ // Funcionalidad del carrusel
+ let indiceActual = 0;
+ const products = document.querySelectorAll('.product');
+
+ function showProduct(indice) {
+     // Quita clases anteriores
+     products.forEach(product => {
+         product.classList.remove('active', 'prev', 'next');
+     });
+
+     // Asigna clases a los autos anterior, actual y siguiente
+     products[indice].classList.add('active');
+     const indicePrev = (indice - 1 + products.length) % products.length;
+     const indiceNext = (indice + 1) % products.length;
+     products[indicePrev].classList.add('prev');
+     products[indiceNext].classList.add('next');
+ }
+
+ function nextProduct() {
+     indiceActual = (indiceActual + 1) % products.length;
+     showProduct(indiceActual);
+ }
+
+ function previusProduct() {
+     indiceActual = (indiceActual - 1 + products.length) % products.length;
+     showProduct(indiceActual);
+ }
+ // Inicializar mostrando el primer auto
+ showProduct(indiceActual);
+ setInterval(nextProduct, 5000)

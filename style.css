@@ -46,11 +46,11 @@ body{
     overflow-x: hidden;
 }
 .cabezal{
-    width: 100vw;
+    width: 100%;
     height: 200px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: flex-start;
     box-sizing: border-box;
     background-image: 
@@ -59,16 +59,10 @@ body{
     color: white;
     border: solid yellow 2px;
 }
-.logo{
-    width: 250px;
-    height: 100%;
-    border: solid 3px white;
-    display: flex;
-}
 .cabezal-container{
     width: 800px;
     height: 100%;
-    margin-right: 60px;
+    margin-right:0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,13 +114,13 @@ body{
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.795);
 }
 .menu-burger{
-    width: 200px;
+    width: 100px;
     height: 700px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-start;
-    z-index: 20;
+    z-index: 10;
     border: solid green 2px;
     
 }
@@ -158,8 +152,8 @@ body{
     background-color: #262626b4;
     border-radius: 10px;
     box-shadow: 0 4px 12px #F2CB05;
-    transform: translateX(200px);
-    transition: transform 0.5s ease;
+    opacity: 0;
+    transition: opacity 0.5s ease;
     
 }
 .menu-burger-list a{
@@ -172,70 +166,117 @@ body{
 .menu-burger-list a:hover{
     text-shadow: 0px 4px 12px #F2CB05;
   } 
-  /*========================================================================
 
-.slideshow{
-    height: 500px;
-    transform: translateX();
-    color: white;
+  .slideshow {
+    width: 100vw;
+    height: 400px;
     position: relative;
+    overflow: hidden;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
-.sombreado{
-    width: 100vw;
-    height: 500px;
-    background-image: 
-    linear-gradient(to right, rgb(0, 0, 0) 0%, rgba(255,255,255, 0) 25%),
-    linear-gradient(to left, rgb(0, 0, 0) 0%, rgba(255,255,255, 0)25%);
-    position: absolute;
-    z-index: 10;
-    overflow-x: hidden;
-}
-.autos{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-end;
-    position: relative;
-    transform: translateX(-10px);
-    transition: transform 0.5s ease;
-}
-.auto{
+.product {
     background: #9c9b9b74;
-    margin: 20px;
+    margin: 10px;
     border-radius: 15px;
     box-shadow: 0 4px 12px #F2CB05;
     transition: transform 0.3s, box-shadow 0.3s;
-    min-width: 300px;
-    height: 300px;
-    z-index: 1;
+    width: 250px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.3s ease, box-shadow 0.2s ease;
 }
-
-.auto img {
-    max-width: 100%;
-    height: 180px;
+.product:hover{
+    box-shadow: 0 7px 16px #F2CB05;
+}
+.product-img{
+    width: 100%;
+    height: 60%;
+}
+.product-img img {
+    width: 250px;
+    height: 100%;
     border-bottom: 5px solid #fec301;
 }
-
-.auto h3 {
-    margin: 10px 0;
-    font-family: 'yapari';
-    text-shadow: #0D0D0D 1px 1px 1px ;
+.product-info{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.precio {
+.product-info h3 {
+    font-family: 'yapari';
+    text-shadow: #0D0D0D 1px 1px 1px;
+    cursor: default;
+    color: #fff;
+    text-align: center;
+}
+.product-info p{
+    width: 70%;
+    overflow: hidden;
+    cursor: default;
+    text-align: center;
+    color: #fff;
+}
+.product-info .precio {
     font-size: 1.2em;
-    margin-top: 10px;
     color: #F2CB05;
     text-shadow: #262626a5 1px 1px 1px;
+    cursor: default;
+    text-align: center;
 }
-    ===================================================*/
+.product.active {
+    opacity: 1;
+}
+.product.prev, .product.next {
+    opacity: 0.5;
+    z-index: 1;
+}
+.product.prev {
+    transform: translateX(-330px);
+}
+.product.next {
+    transform: translateX(330px);
+}
+
+/* Botones de navegación */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-52%);
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.4s ease;
+    z-index: 10;
+}
+.nav-button:hover{
+    background: rgba(0, 0, 0, 0.653);
+}
+.nav-button.left {
+    left: 20px;
+}
+.nav-button.right {
+    right: 20px;
+}
+
+
+
+
+
 .finance{
     width: 100vw;
     height: 100vh;
