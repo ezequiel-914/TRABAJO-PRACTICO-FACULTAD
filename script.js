@@ -12,6 +12,33 @@ function (){
     }
 }
 )
+window.addEventListener('scroll',
+    function (){
+        const homeLight = document.getElementById('home-menu');
+        const slideshowLight = document.getElementById('slideshow-menu');
+        const financeLight = document.getElementById('finance-menu');
+        const techniqueLight = document.getElementById('assistance-menu');
+        const contactLight = document.getElementById('contact-menu');
+        console.log(homeLight, slideshowLight, financeLight, techniqueLight, contactLight)
+        //Limpio todas las classes
+        [homeLight, slideshowLight, financeLight, techniqueLight, contactLight].forEach((item) => {
+           item.classList.remove('light-on')
+           item.classList.add('light-off') 
+        });
+        //condicion
+        if (window.scrollY>=0 && window.scrollY<150){
+           slideshowLight.classList.add('light-on');
+           slideshowLight.classList.remove('light-off');
+            
+        } else if (window.scrollY>=200 && window.scrollY<300){
+            financeLight.classList.add('light-on');
+            financeLight.classList.remove('light-off');
+        } else if (window.scrollY>=400 && window.scrollY<450){
+            techniqueLight.classList.add('light-on');
+            techniqueLight.classList.remove('light-off');
+        }
+    }
+    )
 
 
 document.getElementById("menuIcono").addEventListener("click", function() {
