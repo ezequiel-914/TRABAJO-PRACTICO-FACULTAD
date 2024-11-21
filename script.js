@@ -12,6 +12,7 @@ function (){
     }
 }
 )
+document.addEventListener('DOMContentLoaded', function () {
 window.addEventListener('scroll',
     function (){
         const homeLight = document.getElementById('home-menu');
@@ -19,28 +20,59 @@ window.addEventListener('scroll',
         const financeLight = document.getElementById('finance-menu');
         const techniqueLight = document.getElementById('assistance-menu');
         const contactLight = document.getElementById('contact-menu');
-        console.log(homeLight, slideshowLight, financeLight, techniqueLight, contactLight)
+        console.log(homeLight, slideshowLight, financeLight, techniqueLight, contactLight);
+
+        if(!homeLight || !slideshowLight || !financeLight || !techniqueLight || !contactLight){
+            console.error('uno o mas elem del menu no fueron encontrados')
+        }
+
         //Limpio todas las classes
         [homeLight, slideshowLight, financeLight, techniqueLight, contactLight].forEach((item) => {
            item.classList.remove('light-on')
            item.classList.add('light-off') 
         });
         //condicion
-        if (window.scrollY>=0 && window.scrollY<150){
+        if (window.scrollY>=180 && window.scrollY<550){
            slideshowLight.classList.add('light-on');
            slideshowLight.classList.remove('light-off');
             
-        } else if (window.scrollY>=200 && window.scrollY<300){
+        } else if (window.scrollY>=550 && window.scrollY<1100){
             financeLight.classList.add('light-on');
             financeLight.classList.remove('light-off');
-        } else if (window.scrollY>=400 && window.scrollY<450){
+        } else if (window.scrollY>=1100 && window.scrollY<1700){
             techniqueLight.classList.add('light-on');
             techniqueLight.classList.remove('light-off');
+        }else if (window.scrollY>=1700 && window.scrollY<2000){
+            contactLight.classList.add('light-on');
+            contactLight.classList.remove('light-off');
         }
     }
-    )
 
-
+    
+    )})
+function scrollToSection(targetId){
+        if (event)
+        event.preventDefault();
+        const targetElement = document.getElementById(targetId);
+        if (targetElement){
+            targetElement.scrollIntoView({behavior:"smooth", block: "start"});
+        }
+    }
+function scrollToHome(){
+    scrollToSection("home");
+}
+function scrollToSlide(){
+    scrollToSection("slideshow-section");
+}
+function scrollToFinance(){
+    scrollToSection("finance-section");
+}
+function scrollToTechnique(){
+    scrollToSection("assistance-section");
+}
+function scrollToContact(){
+    scrollToSection("footer-contact");
+}
 document.getElementById("menuIcono").addEventListener("click", function() {
     this.style.transition = "transform 0.5s";
     this.style.transform = this.style.transform === "rotate(360deg)" ? "rotate(0deg)" : "rotate(360deg)";
@@ -76,7 +108,7 @@ function menuBurger(){
      showProduct(indiceActual);
  }
 
- function previusProduct() {
+ function previousProduct() {
      indiceActual = (indiceActual - 1 + products.length) % products.length;
      showProduct(indiceActual);
  }

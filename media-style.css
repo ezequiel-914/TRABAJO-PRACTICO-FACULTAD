@@ -89,6 +89,10 @@
         margin-top: 65px;
         display: flex;
     }
+    .menu{
+        transform: translateY(-100px);
+    }
+
     .line-one, .line-two, .line-three{
         width: 100%;
         height: 7px;
@@ -175,6 +179,7 @@
         height: 2px;
     }
     .cabezal-container{
+        margin-right: -80px;
         height: 150px;
     }
 
@@ -257,11 +262,13 @@
 }
 @media (max-width: 450px){
 
-        .titulo h1{
+    .titulo h1{
         font-size: 20px;
+        margin-left: 20px;
     }
     .subtitulo h2{
         text-align: center;
+        margin-left: 20px;
     }
     .assistance h1{
         font-size: 23px;
@@ -279,6 +286,10 @@
     .titulo h1{
         font-size: 15px;
     }
+    .cabezal-container{
+        margin-left: 0;
+        transform: translateY(40px);
+    }
     .menu-burger-list{
         height: 500px;
         margin-bottom: 80px;
@@ -294,6 +305,7 @@
 @media(max-width:350px){
     .cabezal-container{
         margin-left: 0;
+        transform: translateY(20px);
     }
     .menu-icone{
         width: 15px;

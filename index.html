@@ -15,11 +15,11 @@
     <header class="cabezal" id="home">
       <div class="cabezal-container">
         <div class="menu-closed" id="menu">
-            <a class="light-off" href="#" id="home-menu">Home</a>
-            <a class="light-off" href="#"id="slideshow-menu">Destacados</a>
-            <a class="light-off" href="#" id="finance-menu">Financiamiento</a>
-            <a class="light-off" href="#" id="assistance-menu">Asistencia tecnica</a>
-            <a class="light-off" href="#" id="contact-menu">Contacto</a>
+            <a class="light-off" onclick="scrollToHome()" href="#" id="home-menu">Home</a>
+            <a class="light-off" onclick="scrollToSlide()" href="#"id="slideshow-menu">Destacados</a>
+            <a class="light-off" onclick="scrollToFinance()" href="#" id="finance-menu">Financiamiento</a>
+            <a class="light-off" onclick="scrollToTechnique()" href="#" id="assistance-menu">Asistencia tecnica</a>
+            <a class="light-off" onclick="scrollToContact()" href="#" id="contact-menu">Contacto</a>
         </div>
 
             <div class="titulo">
@@ -131,7 +131,7 @@
 
 
 
-      <section class="finance">
+      <section class="finance" id="finance-section">
             <div class="izq">
                 <div class="uno">
                     <h1>EL MEJOR FINANCIAMIENTO DEL MERCADO</h1>
@@ -152,7 +152,7 @@
                 
                 
         </section>
-        <section class="assistance" id="assistance">
+        <section class="assistance" id="assistance-section">
             <h1>Planes de Cobertura y Service</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sunt, velit modi <i>necessitatibus</i> nihil ipsum. Necessitatibus iure fugiat doloribus velit autem aperiam incidunt vitae, cumque ex eaque id quas molestias.</p>
             <div class="assistance-botao">
