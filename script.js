@@ -1,4 +1,5 @@
 
+//MENU SUPERIOR, EVENTO DE SCROLL########################################################
 
 window.addEventListener('scroll',
 function (){
@@ -10,8 +11,7 @@ function (){
         menu.classList.remove('menu')
         menu.classList.add('menu-closed')
     }
-}
-)
+})
 document.addEventListener('DOMContentLoaded', function () {
 window.addEventListener('scroll',
     function (){
@@ -73,6 +73,9 @@ function scrollToTechnique(){
 function scrollToContact(){
     scrollToSection("footer-contact");
 }
+
+//MENU BURGER  ###################################################################
+
 document.getElementById("menuIcono").addEventListener("click", function() {
     this.style.transition = "transform 0.5s";
     this.style.transform = this.style.transform === "rotate(360deg)" ? "rotate(0deg)" : "rotate(360deg)";
@@ -85,33 +88,44 @@ function menuBurger(){
     MenuBurger.style.opacity = '1';
   }
  }
- // Funcionalidad del carrusel
+
+// FUNCIONALIDADES DEL CARRUSEL##########################################################
+
+ // mecanismo del slideshow
  let indiceActual = 0;
  const products = document.querySelectorAll('.product');
-
  function showProduct(indice) {
-     // Quita clases anteriores
      products.forEach(product => {
          product.classList.remove('active', 'prev', 'next');
      });
-
      // Asigna clases a los autos anterior, actual y siguiente
      products[indice].classList.add('active');
      const indicePrev = (indice - 1 + products.length) % products.length;
      const indiceNext = (indice + 1) % products.length;
      products[indicePrev].classList.add('prev');
      products[indiceNext].classList.add('next');
+ } 
+
+// botones next, previous
+
+let intervalo;
+
+ function iniciarIntervalo(){
+    clearInterval(intervalo);
+    intervalo=setInterval(nextProduct, 5000);
  }
 
  function nextProduct() {
      indiceActual = (indiceActual + 1) % products.length;
      showProduct(indiceActual);
+     iniciarIntervalo();
  }
 
  function previousProduct() {
      indiceActual = (indiceActual - 1 + products.length) % products.length;
      showProduct(indiceActual);
+     iniciarIntervalo();
  }
- // Inicializar mostrando el primer auto
+ 
  showProduct(indiceActual);
- setInterval(nextProduct, 5000)
+ iniciarIntervalo();
